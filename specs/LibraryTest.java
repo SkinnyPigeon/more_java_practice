@@ -11,7 +11,7 @@ public class LibraryTest {
 
   @Before
   public void before() {
-    album = new Audio( "Skinny Pigeon", "The Mice Will Pay", "2007" );
+    album = new Audio( "The Mice Will Pay", "Skinny Pigeon", "2007" );
     video = new Video( "Jaws", "Steven Spielberg", "1979" );
     library = new Library();
   }
@@ -34,7 +34,7 @@ public class LibraryTest {
     library.addMedia( album );
     library.addMedia( video );
     String name = library.getMediaFromLibraryByIndex( 0 ).displayName();
-    assertEquals( "Skinny Pigeon", name );
+    assertEquals( "The Mice Will Pay", name );
   }
 
   @Test
@@ -44,6 +44,13 @@ public class LibraryTest {
     library.sortLibraryByName();
     String name = library.getMediaFromLibraryByIndex( 0 ).displayName();
     assertEquals( "Jaws", name );
+  }
+
+  @Test
+  public void canAddMediaFromLibraryToPlaylistByName() {
+    library.addMedia( album );
+    library.addToPlayListByName( "The Mice Will Pay" );
+    assertEquals( 1, library.displayPlaylistLength() );
   }
 
 }

@@ -55,5 +55,18 @@ public class Library {
     });
   }
 
+  public void addToPlayListByName( String name ) {
+    int length = this.library.size();
+    for( int i = 0; i < length; i++ ) {
+      if( this.library.get( i ).displayName() == name ) {
+        this.playlist.add( this.library.get( i ));
+      }
+    }
+  }
+
+  public int displayPlaylistLength() {
+    return this.playlist.size();
+  }
+
 
 }
