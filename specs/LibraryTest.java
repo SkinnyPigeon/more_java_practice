@@ -53,4 +53,12 @@ public class LibraryTest {
     assertEquals( 1, library.displayPlaylistLength() );
   }
 
+  @Test
+  public void canPlayMediaInThePlaylist() {
+    library.addMedia( album );
+    library.addToPlayListByName( "The Mice Will Pay" );
+    String sound = library.playTrackFromPlaylist( 0 );
+    assertEquals( "MP3 boots and sound eminates", sound );
+  }
+
 }

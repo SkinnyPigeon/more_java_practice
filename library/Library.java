@@ -68,5 +68,9 @@ public class Library {
     return this.playlist.size();
   }
 
+  public String playTrackFromPlaylist( int playlistPosition ) {
+    return this.playlist.get( 0 ).operateMedia();
+  }
+
 
 }
