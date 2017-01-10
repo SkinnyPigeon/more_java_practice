@@ -19,14 +19,14 @@ public class Library {
 
   public void addMedia( Enjoyable media ) {
     this.library.add( media );
-    sortMedia();
+    sortMediaIntoTypes();
   }
 
   public int displayLibrarySize() {
     return this.library.size();
   }
 
-  public void sortMedia() {
+  public void sortMediaIntoTypes() {
     this.audio.clear();
     this.video.clear();
     int length = this.library.size();
