@@ -14,7 +14,25 @@ public class Video implements Enjoyable {
     this.year = year;
   }
 
-  
+  public String displayName() {
+    return this.name;
+  }
+
+  public String displayCreator() {
+    return this.director;
+  }
+
+  public String displayYearOfRelease() {
+    return this.year;
+  }
+
+  public String displayType() {
+    return this.type;
+  }
+
+  public String operateMedia() {
+    return "Video boots up and images move as if by magic";
+  }
 
 
 }
