@@ -43,5 +43,17 @@ public class Library {
     return this.audio.size();
   }
 
+  public Enjoyable getMediaFromLibraryByIndex( int arrayIndex ) {
+    return this.library.get( arrayIndex );
+  }
+
+  public void sortLibraryByName() {
+    Collections.sort(this.library, new Comparator< Enjoyable >() {
+        public int compare( Enjoyable nameOne, Enjoyable nameTwo ) {
+            return nameOne.displayName().compareTo( nameTwo.displayName() );
+        }
+    });
+  }
+
 
 }

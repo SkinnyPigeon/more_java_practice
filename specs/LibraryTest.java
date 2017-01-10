@@ -23,10 +23,27 @@ public class LibraryTest {
   }
 
   @Test
-  public void libraryCanSortMedia() {
+  public void libraryCanSortMediaIntoTypes() {
     library.addMedia( album );
     library.addMedia( video );
     assertEquals( 1, library.displayAudioSize() );
+  }
+
+  @Test
+  public void libraryAddsInOrderOfAddition() {
+    library.addMedia( album );
+    library.addMedia( video );
+    String name = library.getMediaFromLibraryByIndex( 0 ).displayName();
+    assertEquals( "Skinny Pigeon", name );
+  }
+
+  @Test
+  public void libraryCanBeSortedAlphatically() {
+    library.addMedia( album );
+    library.addMedia( video );
+    library.sortLibraryByName();
+    String name = library.getMediaFromLibraryByIndex( 0 ).displayName();
+    assertEquals( "Jaws", name );
   }
 
 }
