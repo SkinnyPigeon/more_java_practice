@@ -1,6 +1,6 @@
 package library;
 
-import library;
+import library.*;
 import java.util.*;
 
 public class Library {
@@ -13,6 +13,14 @@ public class Library {
     this.library = new ArrayList< Enjoyable >();
     this.audio = new ArrayList< Enjoyable >();
     this.video = new ArrayList< Enjoyable >();
+  }
+
+  public void addMedia( Enjoyable media ) {
+    this.library.add( media );
+  }
+
+  public int displayLibrarySize() {
+    return this.library.size();
   }
 
 
