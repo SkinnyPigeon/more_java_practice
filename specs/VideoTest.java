@@ -17,4 +17,19 @@ public class VideoTest {
     assertEquals( "Jaws", video.displayName() );
   }
 
+  @Test
+  public void videoHasDirector() {
+    assertEquals( "Steven Speilberg", video.displayCreator() );
+  }
+
+  @Test
+  public void videoHasYearOfRelease() {
+    assertEquals( "1979", video.displayYearOfRelease() );
+  }
+
+  @Test
+  public void videoHasType() {
+    assertEquals( "Video", video.displayType() );
+  }
+
 }
