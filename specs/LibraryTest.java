@@ -22,4 +22,11 @@ public class LibraryTest {
     assertEquals( 1, library.displayLibrarySize() );
   }
 
+  @Test
+  public void libraryCanSortMedia() {
+    library.addMedia( album );
+    library.addMedia( video );
+    assertEquals( 1, library.displayAudioSize() );
+  }
+
 }
