@@ -8,7 +8,7 @@ public class Audio implements Enjoyable {
   private String year;
 
   public Audio( String name, String artist, String year ) {
-    this.type = "Audio";
+    this.type = "Album";
     this.name = name;
     this.artist = artist;
     this.year = year;
@@ -16,6 +16,18 @@ public class Audio implements Enjoyable {
 
   public String displayName() {
     return this.name;
+  }
+
+  public String displayCreator() {
+    return this.artist;
+  }
+
+  public String displayYearOfRelease() {
+    return this.year;
+  }
+
+  public String displayType() {
+    return this.type;
   }
 
 }

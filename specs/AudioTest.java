@@ -17,4 +17,19 @@ public class AudioTest {
     assertEquals( "The Mice Will Pay", album.displayName() );
   }
 
+  @Test
+  public void albumHasArtist() {
+    assertEquals( "Skinny Pigeon", album.displayCreator() );
+  }
+
+  @Test
+  public void albumHasYearOfRelease() {
+    assertEquals( "2007", album.displayYearOfRelease() );
+  }
+
+  @Test
+  public void albumHasEnjoyableType() {
+    assertEquals( "Album", album.displayType() );
+  }
+
 }
