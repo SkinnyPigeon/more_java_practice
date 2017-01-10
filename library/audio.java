@@ -30,4 +30,8 @@ public class Audio implements Enjoyable {
     return this.type;
   }
 
+  public String operateMedia() {
+    return "MP3 boots and sound eminates";
+  }
+
 }

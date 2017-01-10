@@ -32,4 +32,9 @@ public class AudioTest {
     assertEquals( "Album", album.displayType() );
   }
 
+  @Test
+  public void albumCanBePlayedByComputer() {
+    assertEquals( "MP3 boots and sound eminates", album.operateMedia() );
+  }
+
 }

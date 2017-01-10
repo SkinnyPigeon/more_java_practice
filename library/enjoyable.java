@@ -10,4 +10,6 @@ public interface Enjoyable {
 
   public String displayType();
 
+  public String operateMedia();
+
 }
